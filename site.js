@@ -1,17 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const fadeInSections = document.querySelectorAll(".fade-in-section");
-    console.log("domContentLoaded");
+    const slideInSections = document.querySelectorAll(".slide-in");
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add("fade-in");
+                entry.target.classList.add("slide-in-visible");
             }
         });
     }, {
         threshold: 0.1
     });
 
-    fadeInSections.forEach(section => {
+    slideInSections.forEach(section => {
         observer.observe(section);
     });
 });
