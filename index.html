@@ -9,7 +9,7 @@
     }
 
     header {
-        background-color: cornflowerblue;
+        background-color: darkslategray;
         color: white;
         padding: 1rem 0;
         text-align: center;
@@ -36,7 +36,7 @@
             }
 
     #hero {
-        background-color: paleturquoise;
+        background-color: palegoldenrod;
         padding: 5rem 1rem;
         text-align: center;
         margin-top: 60px;
@@ -50,7 +50,7 @@
 
         #hero p {
             font-size: 1.5rem;
-            color: lightseagreen;
+            color: darkslategray;
         }
 
     section {
@@ -61,19 +61,25 @@
         transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     }
 
-        section.fade-in {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    .slide-in {
+        opacity: 0;
+        transform: translateX(-100px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
 
-        section h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: darkslategray;
-        }
+    .slide-in-visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    section h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: darkslategray;
+    }
 
     .project {
-        background-color: sandybrown;
+        background-color: lightskyblue;
         margin: 1rem 0;
         padding: 1rem;
         border-radius: 8px;
@@ -85,7 +91,7 @@
         }
 
         .project a {
-            color: deepskyblue;
+            color: darkslategray;
             text-decoration: none;
         }
 
@@ -94,7 +100,7 @@
             }
 
     footer {
-        background-color: lightseagreen;
+        background-color: darkslategray;
         color: white;
         padding: 1rem 0;
         text-align: center;
@@ -138,11 +144,11 @@
         <h1>Hi, I'm [Your Name]</h1>
         <p>Web Developer</p>
     </section>
-    <section id="about" class="fade-in-section">
+    <section id="about" class="slide-in">
         <h2>About Me</h2>
         <p>I'm a passionate web developer with experience in creating dynamic and responsive websites.</p>
     </section>
-    <section id="projects" class="fade-in-section">
+    <section id="projects" class="slide-in">
         <h2>Projects</h2>
         <div class="project">
             <h3>Project 1</h3>
@@ -155,7 +161,7 @@
             <a href="#">View Project</a>
         </div>
     </section>
-    <section id="skills" class="fade-in-section">
+    <section id="skills" class="slide-in">
         <h2>Skills</h2>
         <ul>
             <li>HTML</li>
@@ -165,7 +171,7 @@
             <li>Node.js</li>
         </ul>
     </section>
-    <section id="contact" class="fade-in-section">
+    <section id="contact" class="slide-in">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
