@@ -1,0 +1,5 @@
+FileContentIndex
+*.vsidx
+*.suo
+*.user
+.vs/
