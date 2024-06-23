@@ -49,9 +49,9 @@ function toggleDarkMode(darkOrLight) {
     //    element.classList.toggle('dark-mode');
     //});
     elements.forEach(element => {
-        if (mode === 'dark') {
+        if (darkOrLight === 'dark') {
             element.classList.add('dark-mode');
-        } else if (mode === 'light') {
+        } else if (darkOrLight === 'light') {
             element.classList.remove('dark-mode');
         }
     });
