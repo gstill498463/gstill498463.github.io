@@ -44,6 +44,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+function scrollToSection(sectionId) {
+    const element = document.querySelector(sectionId);
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
 //function toggleDarkMode() {
 //    const elements = document.querySelectorAll('.colorMode');
 //    console.log("color mode changed!");
