@@ -21,13 +21,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function toggleDarkMode() {
     const elements = document.querySelectorAll('.colorMode');
-    console.log("color mode changed!");
+
     elements.forEach(element => {
         element.classList.toggle('dark-mode');
     });
 
-    // Additional logic to store user preference in localStorage
+    // Store the user preference in localStorage
+    const body = document.body;
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
 }
+
+// Check the user's preferred theme from localStorage on page load
+document.addEventListener('DOMContentLoaded', function () {
+    const theme = localStorage.getItem('theme');
+
+    if (theme === 'dark') {
+        document.body.classList.add('dark-mode'); // Apply dark mode on page load
+    }
+});
+
+//function toggleDarkMode() {
+//    const elements = document.querySelectorAll('.colorMode');
+//    console.log("color mode changed!");
+//    elements.forEach(element => {
+//        element.classList.toggle('dark-mode');
+//    });
+
+//    // Additional logic to store user preference in localStorage
+//}
 
 //function toggleDarkMode() {
 //    const elements = document.querySelectorAll('.colorMode');
