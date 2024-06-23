@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
+    if (valueOf(localStorage.getItem('theme') === 'dark')) {
+        ColorModeLightBulb('dark');
+    }
+    else {
+        ColorModeLightBulb('light');
+    }
     const slideInSections = document.querySelectorAll(".slide-in");
 
     const observer = new IntersectionObserver((entries) => {
@@ -44,7 +50,7 @@ window.addEventListener('scroll', handleScroll);
 
 function toggleDarkMode(darkOrLight) {
     const elements = document.querySelectorAll('.colorMode');
-    const colorModeLightBulbs = document.querySelectorAll('.colorModeLightBulb');
+    
     const moonLightModes = document.querySelectorAll('.moonLightMode');
 
     //elements.forEach(element => {
@@ -62,17 +68,8 @@ function toggleDarkMode(darkOrLight) {
         }
     });
 
-    colorModeLightBulbs.forEach(ligthBulb => {
-        if (darkOrLight === 'dark') {
-            ligthBulb.classList.remove('light-Bulb-On');
-            ligthBulb.classList.remove('fa-solid');
-            ligthBulb.classList.add('fa-regular');
-        } else if (darkOrLight === 'light') {
-            ligthBulb.classList.remove('fa-regular');
-            ligthBulb.classList.add('light-Bulb-On');
-            ligthBulb.classList.add('fa-solid');
-        }
-    });
+    ColorModeLightBulb(darkOrLight);
+    
     elements.forEach(element => {
         if (darkOrLight === 'dark') {
             element.classList.add('dark-mode');
@@ -88,6 +85,21 @@ function toggleDarkMode(darkOrLight) {
     } else {
         localStorage.setItem('theme', 'light');
     }
+}
+
+function ColorModeLightBulb(darkOrLight) {
+    const colorModeLightBulbs = document.querySelectorAll('.colorModeLightBulb');
+    colorModeLightBulbs.forEach(ligthBulb => {
+        if (darkOrLight === 'dark') {
+            ligthBulb.classList.remove('light-Bulb-On');
+            ligthBulb.classList.remove('fa-solid');
+            ligthBulb.classList.add('fa-regular');
+        } else if (darkOrLight === 'light') {
+            ligthBulb.classList.remove('fa-regular');
+            ligthBulb.classList.add('light-Bulb-On');
+            ligthBulb.classList.add('fa-solid');
+        }
+    });
 }
 
 // Check the user's preferred theme from localStorage on page load
