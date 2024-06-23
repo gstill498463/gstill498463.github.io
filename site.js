@@ -71,7 +71,7 @@ function toggleDarkMode(darkOrLight) {
 
     // Store the user preference in localStorage
     const body = document.body;
-    if (body.classList.contains('dark-mode')) {
+    if (body.classList.contains('dark-mode') || body.classList.contains('dark-mode')) {
         localStorage.setItem('theme', 'dark');
     } else {
         localStorage.setItem('theme', 'light');
