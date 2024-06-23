@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("v1");
+    console.log("v2")
     var theme = '';
     if (localStorage.getItem('theme') != null) {
         if (localStorage.getItem('theme') === 'dark') {
@@ -17,34 +17,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
     
-    //const slideInSections = document.querySelectorAll(".slide-in");
-
-    //const observer = new IntersectionObserver((entries) => {
-    //    entries.forEach(entry => {
-    //        if (entry.isIntersecting) {
-    //            entry.target.classList.add("slide-in-visible");
-    //        }
-    //        else {
-    //            entry.target.classList.remove("slide-in-visible");
-    //        }
-    //    });
-    //}, {
-    //    threshold: 0.1
-    //});
-
-    //slideInSections.forEach(section => {
-    //    observer.observe(section);
-    //});
-});
-///////
-document.addEventListener('DOMContentLoaded', () => {
     const slideInSections = document.querySelectorAll(".slide-in");
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("slide-in-visible");
-            } else {
+            }
+            else {
                 entry.target.classList.remove("slide-in-visible");
             }
         });
@@ -55,57 +35,32 @@ document.addEventListener('DOMContentLoaded', () => {
     slideInSections.forEach(section => {
         observer.observe(section);
     });
-
-    // Store the last scroll position
-    let lastScroll = 0;
-
-    // Function to handle scroll event
-    function handleScroll() {
-        // Loop through each section
-        slideInSections.forEach(section => {
-            // Calculate scroll direction (down or up)
-            const scrollDirection = window.scrollY > lastScroll ? 'down' : 'up';
-
-            // Apply transform based on scroll direction
-            if (scrollDirection === 'down') {
-                section.style.transform = 'translateY(-100px)';
-            } else if (scrollDirection === 'up') {
-                section.style.transform = 'translateY(100px)';
-            }
-        });
-
-        // Update last scroll position
-        lastScroll = window.scrollY;
-    }
-
-    // Attach the scroll event listener to the window
-    window.addEventListener('scroll', handleScroll);
 });
-///////
-// Select all sections with class 'scroll-section'
-//const sections = document.querySelectorAll('.slide-in');
 
-//// Function to handle scroll event
-//function handleScroll() {
-//    // Loop through each section
-//    sections.forEach(section => {
-//        // Calculate scroll direction (down or up)
-//        const scrollDirection = window.scrollY > this.lastScroll ? 'down' : 'up';
-//        this.lastScroll = window.scrollY;
-//        //console.log("scroll direction:", scrollDirection);
-//        // Apply transform based on scroll direction
-//        if (scrollDirection === 'down') {
-//            section.style.transform = 'translateY(-100px)';
-//            //console.log("-section", section);
-//        } else if (scrollDirection === 'up') {
-//            section.style.transform = 'translateY(100px)';
-//            //console.log("+section", section);
-//        }
-//    });
-//}
+// Select all sections with class 'scroll-section'
+const sections = document.querySelectorAll('.slide-in');
+
+// Function to handle scroll event
+function handleScroll() {
+    // Loop through each section
+    sections.forEach(section => {
+        // Calculate scroll direction (down or up)
+        const scrollDirection = window.scrollY > this.lastScroll ? 'down' : 'up';
+        this.lastScroll = window.scrollY;
+        //console.log("scroll direction:", scrollDirection);
+        // Apply transform based on scroll direction
+        if (scrollDirection === 'down') {
+            section.style.transform = 'translateY(-100px)';
+            //console.log("-section", section);
+        } else if (scrollDirection === 'up') {
+            section.style.transform = 'translateY(100px)';
+            //console.log("+section", section);
+        }
+    });
+}
 
 // Listen for scroll events and call handleScroll function
-//window.addEventListener('scroll', handleScroll);
+window.addEventListener('scroll', handleScroll);
 
 function toggleDarkMode(darkOrLight) {
     const elements = document.querySelectorAll('.colorMode');
