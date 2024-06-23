@@ -46,12 +46,14 @@ function handleScroll() {
         // Calculate scroll direction (down or up)
         const scrollDirection = window.scrollY > this.lastScroll ? 'down' : 'up';
         this.lastScroll = window.scrollY;
-        console.log("scroll direction:", scrollDirection);
+        //console.log("scroll direction:", scrollDirection);
         // Apply transform based on scroll direction
         if (scrollDirection === 'down') {
             section.style.transform = 'translateY(-100px)';
+            console.log("-section", section);
         } else if (scrollDirection === 'up') {
             section.style.transform = 'translateY(100px)';
+            console.log("+section", section);
         }
     });
 }
