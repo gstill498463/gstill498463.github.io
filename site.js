@@ -88,9 +88,9 @@ function ColorModeHeaderButtons(darkOrLight) {
     const topMenuButtons = document.querySelectorAll('.topMenuButtons');
     topMenuButtons.forEach(button => {
         if (darkOrLight === 'dark') {
-            button.classList.add('dark-mode');
+            button.classList.add('topMenuButtonsWhite');
         } else if (darkOrLight === 'light') {
-            button.classList.remove('dark-mode');
+            button.classList.remove('topMenuButtonsWhite');
         }
     });
 }
