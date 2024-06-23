@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //}
 
 // Listen for scroll events and call handleScroll function
-window.addEventListener('scroll', handleScroll);
+//window.addEventListener('scroll', handleScroll);
 
 function toggleDarkMode(darkOrLight) {
     const elements = document.querySelectorAll('.colorMode');
