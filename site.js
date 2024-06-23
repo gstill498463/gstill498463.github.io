@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     if (localStorage.getItem('theme') != null) {
-        if (valueOf(localStorage.getItem('theme') === 'dark')) {
+        if (localStorage.getItem('theme') === 'dark') {
             ColorModeLightBulb('dark');
         }
         else {
