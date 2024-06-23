@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function toggleDarkMode() {
     const elements = document.querySelectorAll('.colorMode');
-
+    console.log("color mode changed!")
     elements.forEach(element => {
         element.classList.toggle('dark-mode');
     });
