@@ -1,10 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
-    if (valueOf(localStorage.getItem('theme') === 'dark')) {
-        ColorModeLightBulb('dark');
+    if (localStorage.getItem('theme') != null) {
+        if (valueOf(localStorage.getItem('theme') === 'dark')) {
+            ColorModeLightBulb('dark');
+        }
+        else {
+            ColorModeLightBulb('light');
+        }
     }
-    else {
-        ColorModeLightBulb('light');
-    }
+    
     const slideInSections = document.querySelectorAll(".slide-in");
 
     const observer = new IntersectionObserver((entries) => {
