@@ -20,18 +20,38 @@
         </nav>
         <div class="btn-group btn-group-toggle" data-toggle="buttons" style="border: 2px solid slategray; border-radius: 35px;">
             <label class="btn">
-                
-                <div style="border-radius: 30px; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);"></div>
-                
+
+
                 <i class="fa-solid fa-bars" style="background: none; border: none; cursor: pointer; color: darkslategrey;" checked=""></i>
             </label>
             <label class="btn">
-               
-                <div style="border-radius:30px; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);"></div>
-                
+
+
                 <i class="fa-solid fa-border-all" style="background: none; border: none; cursor: pointer; color: darkslategrey;"></i>
             </label>
         </div>
+
+        <!--original example-->
+
+        <!--<div class="btn-group btn-group-toggle" data-toggle="buttons" style="border: 2px solid slategray; border-radius: 35px;">
+            <label class="btn">
+                @if (IsGrid)
+                {
+                <div style="border-radius: 30px; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);"></div>
+                }
+                <i class="fa-solid fa-bars" style="background: none; border: none; cursor: pointer; color: darkslategrey;" checked="" @onclick="@(() => ThumbnailOrGrid(" grid"))"></i>
+            </label>
+            <label class="btn">
+                @if (!IsGrid)
+                {
+                <div style="border-radius:30px; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);"></div>
+                }
+                <i class="fa-solid fa-border-all" style="background: none; border: none; cursor: pointer; color: darkslategrey;" @onclick="@(() => ThumbnailOrGrid(" thumbnail"))"></i>
+            </label>
+        </div>-->
+
+
+
         <button style="border:none;" onclick="toggleDarkMode()">Toggle Dark/Light Mode</button>
     </header>
 
