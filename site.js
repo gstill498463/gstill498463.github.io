@@ -18,3 +18,19 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(section);
     });
 });
+
+function toggleDarkMode() {
+    const elements = document.querySelectorAll('.colorMode');
+
+    elements.forEach(element => {
+        element.classList.toggle('dark-mode');
+    });
+
+    // Store the user preference in localStorage
+    const body = document.body;
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+}

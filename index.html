@@ -1,3 +1,4 @@
+
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -6,6 +7,16 @@
         box-sizing: border-box;
         scroll-behavior: smooth;
         background-color: cornflowerblue;
+    }
+
+    .colorMode {
+        color: #333333;
+        background-color: #ffffff;
+    }
+
+    .dark-mode .colorMode {
+        color: #ffffff;
+        background-color: #333333;
     }
 
     header {
@@ -145,7 +156,7 @@
     <!--<link rel="stylesheet" href="styles.css">-->
 </head>
 <body>
-    <header>
+    <header class="colorMode">
         <nav>
             <ul>
                 <li><a href="#about">About Me</a></li>
@@ -154,6 +165,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <button onclick="toggleDarkMode()">Toggle Dark/Light Mode</button>
     </header>
 
     <section id="hero" class="slide-in">
