@@ -12,7 +12,7 @@ body {
     background-color: #eeeeee;
 }
 
-    .colorMode .dark-mode {
+    .colorMode.dark-mode {
         color: #eeeeee;
         background-color: #333333;
     }
