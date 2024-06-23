@@ -41,8 +41,9 @@ const sections = document.querySelectorAll('.slide-in');
 
 // Function to handle scroll event
 function handleScroll() {
+    sectionsTest = document.querySelectorAll('.slide-in');
     // Loop through each section
-    sections.forEach(section => {
+    sectionsTest.forEach(section => {
         // Calculate scroll direction (down or up)
         const scrollDirection = window.scrollY > this.lastScroll ? 'down' : 'up';
         this.lastScroll = window.scrollY;
