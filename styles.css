@@ -16,6 +16,13 @@ body {
         color: #eeeeee;
         background-color: #333333;
     }
+.light-Bulb-On {
+    color: #FFD43B;
+    border: none;
+    cursor: pointer;
+}
+
+
 
 /*.linktext
 */

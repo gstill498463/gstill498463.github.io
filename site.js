@@ -44,10 +44,23 @@ window.addEventListener('scroll', handleScroll);
 
 function toggleDarkMode(darkOrLight) {
     const elements = document.querySelectorAll('.colorMode');
+    const colorModeLightBulbs = document.querySelectorAll('.colorModeLightBulb');
 
     //elements.forEach(element => {
     //    element.classList.toggle('dark-mode');
     //});
+
+    colorModeLightBulbs.forEach(ligthBulb => {
+        if (darkOrLight === 'dark') {
+            ligthBulb.classList.remove('light-Bulb-On');
+            ligthBulb.classList.remove('fa-solid');
+            ligthBulb.classList.add('fa-regular');
+        } else if (darkOrLight === 'light') {
+            ligthBulb.classList.remove('fa-regular');
+            ligthBulb.classList.add('light-Bulb-On');
+            ligthBulb.classList.add('fa-solid');
+        }
+    });
     elements.forEach(element => {
         if (darkOrLight === 'dark') {
             element.classList.add('dark-mode');
