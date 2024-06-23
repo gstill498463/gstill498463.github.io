@@ -54,6 +54,7 @@ function toggleDarkMode(darkOrLight) {
         } else if (mode === 'light') {
             element.classList.remove('dark-mode');
         }
+    });
 
     // Store the user preference in localStorage
     const body = document.body;
