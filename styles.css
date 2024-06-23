@@ -27,6 +27,7 @@ body {
 header {
     /* background-color: darkslategray;
         color: white;*/
+    font-family: "Segoe UI", Arial, sans-serif;
     padding: 1rem 0;
     text-align: center;
     position: fixed;
