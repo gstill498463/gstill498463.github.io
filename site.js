@@ -1,10 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
+    var theme = '';
     if (localStorage.getItem('theme') != null) {
         if (localStorage.getItem('theme') === 'dark') {
-            ColorModeLightBulb('dark');
+            theme = 'dark';
+            ColorModeLightBulb(theme);
+            ColorModeMoon(theme);
+            ColorModeHeaderButtons(theme);
+
         }
         else {
-            ColorModeLightBulb('light');
+            theme = 'light';
+            ColorModeLightBulb(theme);
+            ColorModeMoon(theme);
+            ColorModeHeaderButtons(theme);
         }
     }
     
@@ -54,24 +62,10 @@ window.addEventListener('scroll', handleScroll);
 function toggleDarkMode(darkOrLight) {
     const elements = document.querySelectorAll('.colorMode');
     
-    const moonLightModes = document.querySelectorAll('.moonLightMode');
-
-    //elements.forEach(element => {
-    //    element.classList.toggle('dark-mode');
-    //});
-    moonLightModes.forEach(moon => {
-        if (darkOrLight === 'dark') {
-            moon.classList.remove('fa-regular');
-            moon.classList.add('fa-solid');
-            
-            
-        } else if (darkOrLight === 'light') {
-            moon.classList.remove('fa-solid');
-            moon.classList.add('fa-regular');
-        }
-    });
-
+    
+    ColorModeMoon(darkOrLight);
     ColorModeLightBulb(darkOrLight);
+    ColorModeHeaderButtons(darkOrLight);
     
     elements.forEach(element => {
         if (darkOrLight === 'dark') {
@@ -88,6 +82,32 @@ function toggleDarkMode(darkOrLight) {
     } else {
         localStorage.setItem('theme', 'light');
     }
+}
+
+function ColorModeHeaderButtons(darkOrLight) {
+    const topMenuButtons = document.querySelectorAll('.topMenuButtons');
+    topMenuButtons.forEach(button => {
+        if (darkOrLight === 'dark') {
+            button.classList.add('dark-mode');
+        } else if (darkOrLight === 'light') {
+            button.classList.remove('dark-mode');
+        }
+    });
+}
+
+function ColorModeMoon(darkOrLight) {
+    const moonLightModes = document.querySelectorAll('.moonLightMode');
+    moonLightModes.forEach(moon => {
+        if (darkOrLight === 'dark') {
+            moon.classList.remove('fa-regular');
+            moon.classList.add('fa-solid');
+
+
+        } else if (darkOrLight === 'light') {
+            moon.classList.remove('fa-solid');
+            moon.classList.add('fa-regular');
+        }
+    });
 }
 
 function ColorModeLightBulb(darkOrLight) {
