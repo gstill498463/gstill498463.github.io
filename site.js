@@ -45,10 +45,22 @@ window.addEventListener('scroll', handleScroll);
 function toggleDarkMode(darkOrLight) {
     const elements = document.querySelectorAll('.colorMode');
     const colorModeLightBulbs = document.querySelectorAll('.colorModeLightBulb');
+    const moonLightModes = document.querySelectorAll('.moonLightMode');
 
     //elements.forEach(element => {
     //    element.classList.toggle('dark-mode');
     //});
+    moonLightModes.forEach(moon => {
+        if (darkOrLight === 'dark') {
+            moon.classList.remove('fa-regular');
+            moon.classList.add('fa-solid');
+            
+            
+        } else if (darkOrLight === 'light') {
+            moon.classList.remove('fa-solid');
+            moon.classList.add('fa-regular');
+        }
+    });
 
     colorModeLightBulbs.forEach(ligthBulb => {
         if (darkOrLight === 'dark') {
