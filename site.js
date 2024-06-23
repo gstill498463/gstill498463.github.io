@@ -42,12 +42,18 @@ function handleScroll() {
 // Listen for scroll events and call handleScroll function
 window.addEventListener('scroll', handleScroll);
 
-function toggleDarkMode() {
+function toggleDarkMode(darkOrLight) {
     const elements = document.querySelectorAll('.colorMode');
 
+    //elements.forEach(element => {
+    //    element.classList.toggle('dark-mode');
+    //});
     elements.forEach(element => {
-        element.classList.toggle('dark-mode');
-    });
+        if (mode === 'dark') {
+            element.classList.add('dark-mode');
+        } else if (mode === 'light') {
+            element.classList.remove('dark-mode');
+        }
 
     // Store the user preference in localStorage
     const body = document.body;

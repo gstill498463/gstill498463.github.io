@@ -20,16 +20,16 @@
                 <li><button style="border:none" onclick="scrollToSection('#contact')">Contact</button></li>
             </ul>
         </nav>
-        <div class="btn-group btn-group-toggle" data-toggle="buttons" style="border: 2px solid slategray; border-radius: 35px;">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons" style="border: none; border-radius: 35px;">
             <label class="btn">
 
 
-                <i class="fa-regular fa-sun" style="background: none; border: none; cursor: pointer;"></i>
+                <i class="fa-regular fa-sun" style="background: none; border: none; cursor: pointer;" onclick="toggleDarkMode('light')"></i>
             </label>
             <label class="btn">
 
 
-                <i class="fa-regular fa-moon" style="background: none; border: none; cursor: pointer;"></i>
+                <i class="fa-regular fa-moon" style="background: none; border: none; cursor: pointer;" onclick="toggleDarkMode('dark')"></i>
             </label>
         </div>
 
@@ -54,7 +54,7 @@
 
 
 
-        <button style="border:none;" onclick="toggleDarkMode()">Toggle Dark/Light Mode</button>
+        <!--<button style="border:none;" onclick="toggleDarkMode()">Toggle Dark/Light Mode</button>-->
     </header>
 
     <section id="hero" class="slide-in">
