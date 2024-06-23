@@ -1,23 +1,46 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const slideInSections = document.querySelectorAll(".slide-in");
+//document.addEventListener("DOMContentLoaded", function () {
+//    const slideInSections = document.querySelectorAll(".slide-in");
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("slide-in-visible");
-            }
-            else {
-                entry.target.classList.remove("slide-in-visible");
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
+//    const observer = new IntersectionObserver((entries) => {
+//        entries.forEach(entry => {
+//            if (entry.isIntersecting) {
+//                entry.target.classList.add("slide-in-visible");
+//            }
+//            else {
+//                entry.target.classList.remove("slide-in-visible");
+//            }
+//        });
+//    }, {
+//        threshold: 0.1
+//    });
 
-    slideInSections.forEach(section => {
-        observer.observe(section);
+//    slideInSections.forEach(section => {
+//        observer.observe(section);
+//    });
+//});
+
+// Select all sections with class 'scroll-section'
+const sections = document.querySelectorAll('.slide-in');
+
+// Function to handle scroll event
+function handleScroll() {
+    // Loop through each section
+    sections.forEach(section => {
+        // Calculate scroll direction (down or up)
+        const scrollDirection = window.scrollY > this.lastScroll ? 'down' : 'up';
+        this.lastScroll = window.scrollY;
+
+        // Apply transform based on scroll direction
+        if (scrollDirection === 'down') {
+            section.style.transform = 'translateY(100px)';
+        } else if (scrollDirection === 'up') {
+            section.style.transform = 'translateY(-100px)';
+        }
     });
-});
+}
+
+// Listen for scroll events and call handleScroll function
+window.addEventListener('scroll', handleScroll);
 
 function toggleDarkMode() {
     const elements = document.querySelectorAll('.colorMode');
