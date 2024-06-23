@@ -41,13 +41,12 @@ const sections = document.querySelectorAll('.slide-in');
 
 // Function to handle scroll event
 function handleScroll() {
-    sectionsTest = document.querySelectorAll('.slide-in');
     // Loop through each section
-    sectionsTest.forEach(section => {
+    sections.forEach(section => {
         // Calculate scroll direction (down or up)
         const scrollDirection = window.scrollY > this.lastScroll ? 'down' : 'up';
         this.lastScroll = window.scrollY;
-
+        console.log("scroll direction:", scrollDirection);
         // Apply transform based on scroll direction
         if (scrollDirection === 'down') {
             section.style.transform = 'translateY(-100px)';
@@ -142,28 +141,3 @@ function scrollToSection(sectionId) {
     }
 }
 
-//function toggleDarkMode() {
-//    const elements = document.querySelectorAll('.colorMode');
-//    console.log("color mode changed!");
-//    elements.forEach(element => {
-//        element.classList.toggle('dark-mode');
-//    });
-
-//    // Additional logic to store user preference in localStorage
-//}
-
-//function toggleDarkMode() {
-//    const elements = document.querySelectorAll('.colorMode');
-//    console.log("color mode changed!");
-//    elements.forEach(element => {
-//        element.classList.toggle('dark-mode');
-//    });
-
-//    //// Store the user preference in localStorage
-//    //const body = document.body;
-//    //if (body.classList.contains('dark-mode')) {
-//    //    localStorage.setItem('theme', 'dark');
-//    //} else {
-//    //    localStorage.setItem('theme', 'light');
-//    //}
-//}
