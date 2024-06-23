@@ -32,9 +32,9 @@ function handleScroll() {
 
         // Apply transform based on scroll direction
         if (scrollDirection === 'down') {
-            section.style.transform = 'translateY(100px)';
-        } else if (scrollDirection === 'up') {
             section.style.transform = 'translateY(-100px)';
+        } else if (scrollDirection === 'up') {
+            section.style.transform = 'translateY(100px)';
         }
     });
 }
