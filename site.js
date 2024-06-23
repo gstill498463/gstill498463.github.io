@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
             if (entry.isIntersecting) {
                 entry.target.classList.add("slide-in-visible");
             }
+            else {
+                entry.target.classList.remove("slide-in-visible");
+            }
         });
     }, {
         threshold: 0.1

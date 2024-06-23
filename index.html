@@ -23,6 +23,7 @@
         list-style: none;
         padding: 0;
         margin: 0;
+        list-style-type:none;
     }
 
         nav ul li {
@@ -54,22 +55,27 @@
         }
 
     section {
-        padding: 4rem 1rem;
+        /*  padding: 4rem 1rem;
         text-align: center;
         opacity: 0;
         transform: translateY(20px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;*/
+        padding: 4rem 1rem;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(-100px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
     }
 
     .slide-in {
         opacity: 0;
-        transform: translateX(-100px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        transform: translateY(-100px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
     }
 
     .slide-in-visible {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
     }
 
     section h2 {
@@ -106,6 +112,7 @@
         text-align: center;
         position: fixed;
         width: 100%;
+        height: 75%;
         bottom: 0;
     }
 
