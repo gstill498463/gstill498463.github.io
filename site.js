@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("v2")
+    console.log("v3")
     var theme = '';
     if (localStorage.getItem('theme') != null) {
         if (localStorage.getItem('theme') === 'dark') {
