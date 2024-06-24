@@ -64,7 +64,7 @@ section {
     padding: 4rem 1rem;
     text-align: center;
     opacity: 0;
-    justify-content: center;
+    /*justify-content: center;*/
     /*transform: translateY(100px);*/
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
