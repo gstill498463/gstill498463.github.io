@@ -147,3 +147,11 @@ function scrollToSection(sectionId) {
     }
 }
 
+function externalUrl(url) {
+    if (url == 'mailto:gabe.dev498463@gmail.com') {
+        window.location.href = "mailto:gabe.dev498463@gmail.com";
+    } else {
+        window.open(url, '_blank');
+    }
+}
+
