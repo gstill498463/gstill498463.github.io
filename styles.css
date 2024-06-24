@@ -68,23 +68,23 @@ nav ul {
 }
 
 #hero.in-view {
-    transform: translateY(-50px);
+    transform: translateY(-150px);
 }
 
 #about.in-view {
-    transform: translateY(-50px);
+    transform: translateY(-150px);
 }
 
 #projects.in-view {
-    transform: translateY(-50px);
+    transform: translateY(-150px);
 }
 
 #skills.in-view {
-    transform: translateY(-50px);
+    transform: translateY(-150px);
 }
 
 #contact.in-view {
-    transform: translateY(-50px);
+    transform: translateY(-150px);
 }
 /*new
 */
