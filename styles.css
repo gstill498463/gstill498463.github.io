@@ -60,6 +60,14 @@ nav ul {
     font-size: 2em;
     
 }*/
+section {
+    padding: 4rem 1rem;
+    text-align: center;
+    opacity: 0;
+    justify-content: center;
+    /*transform: translateY(100px);*/
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
 .slide-in {
     display: flex;
     opacity: 0;
@@ -119,13 +127,7 @@ nav ul {
     margin: 0 auto;
 }
 
-section {
-    padding: 4rem 1rem;
-    text-align: center;
-    opacity: 0;
-    /*transform: translateY(100px);*/
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
+
 
 
 
