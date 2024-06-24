@@ -51,56 +51,7 @@ nav ul {
         nav ul li a {
             text-decoration: none;
         }
-/*new
-*/
-/*.section {
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    
-}*/
-section {
-    padding: 4rem 1rem;
-    text-align: center;
-    opacity: 0;
-    /*justify-content: center;*/
-    /*transform: translateY(100px);*/
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-.slide-in {
-    display: flex;
-    opacity: 0;
-    /*transform: translateY(100px);*/
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
 
-.in-view {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-#hero.in-view {
-    transform: translateY(-150px);
-}
-
-#about.in-view {
-    transform: translateY(-150px);
-}
-
-#projects.in-view {
-    transform: translateY(-150px);
-}
-
-#skills.in-view {
-    transform: translateY(-150px);
-}
-
-#contact.in-view {
-    transform: translateY(-150px);
-}
-/*new
-*/
 
 #hero {
     padding: 5rem 1rem;
@@ -127,9 +78,19 @@ section {
     margin: 0 auto;
 }
 
+section {
+    padding: 4rem 1rem;
+    text-align: center;
+    opacity: 0;
+    /*transform: translateY(100px);*/
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
 
-
-
+.slide-in {
+    opacity: 0;
+    /*transform: translateY(100px);*/
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
 
 .slide-in-visible {
     opacity: 1;

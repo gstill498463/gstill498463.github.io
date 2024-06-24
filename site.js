@@ -1,5 +1,5 @@
-document.addEventListener('DOMContentLoaded', function () {
-    console.log("v11");
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("v12");
     var theme = '';
     if (localStorage.getItem('theme') != null) {
         if (localStorage.getItem('theme') === 'dark') {
@@ -16,51 +16,56 @@ document.addEventListener('DOMContentLoaded', function () {
             ColorModeHeaderButtons(theme);
         }
     }
-    const sections = document.querySelectorAll('.slide-in');
+    
+    const slideInSections = document.querySelectorAll(".slide-in");
 
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.25
-    };
-
-    const observerCallback = (entries, observer) => {
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('in-view');
-            } else {
-                entry.target.classList.remove('in-view');
+                entry.target.classList.add("slide-in-visible");
+            }
+            else {
+                entry.target.classList.remove("slide-in-visible");
             }
         });
-    };
+    }, {
+        threshold: 0.1
+    });
 
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-    sections.forEach(section => {
+    slideInSections.forEach(section => {
         observer.observe(section);
     });
+
+    window.addEventListener('scroll', handleScroll);
+
+    
 });
 
+let lastScroll = 0;
 
-//function handleScroll() {
-//    // Loop through each section
-//    sections.forEach(section => {
-//        // Calculate scroll direction (down or up)
-//        const scrollDirection = window.scrollY > this.lastScroll ? 'down' : 'up';
-//        //const scrollDirection = window.scrollY > lastScroll ? 'down' : 'up';
-//        this.lastScroll = window.scrollY;
-//        //console.log("scroll direction:", scrollDirection);
-//        // Apply transform based on scroll direction
-//        if (scrollDirection === 'down') {
-//            section.style.transform = 'translateY(-100px)';
-//            //console.log("-section", section);
-//        } else if (scrollDirection === 'up') {
-//            section.style.transform = 'translateY(100px)';
-//            //console.log("+section", section);
-//        }
-//    });
-//    lastScroll = window.scrollY;
-//}
+// Select all sections with class 'scroll-section'
+const sections = document.querySelectorAll('.slide-in');
+
+// Function to handle scroll event
+function handleScroll() {
+    // Loop through each section
+    sections.forEach(section => {
+        // Calculate scroll direction (down or up)
+        const scrollDirection = window.scrollY > this.lastScroll ? 'down' : 'up';
+        //const scrollDirection = window.scrollY > lastScroll ? 'down' : 'up';
+        this.lastScroll = window.scrollY;
+        //console.log("scroll direction:", scrollDirection);
+        // Apply transform based on scroll direction
+        if (scrollDirection === 'down') {
+            section.style.transform = 'translateY(-100px)';
+            //console.log("-section", section);
+        } else if (scrollDirection === 'up') {
+            section.style.transform = 'translateY(100px)';
+            //console.log("+section", section);
+        }
+    });
+    lastScroll = window.scrollY;
+}
 
 // Listen for scroll events and call handleScroll function
 
