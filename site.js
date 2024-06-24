@@ -35,7 +35,12 @@ document.addEventListener("DOMContentLoaded", function () {
     slideInSections.forEach(section => {
         observer.observe(section);
     });
+
+    window.addEventListener('scroll', handleScroll);
+
+    
 });
+let lastScroll = 0;
 
 // Select all sections with class 'scroll-section'
 const sections = document.querySelectorAll('.slide-in');
@@ -45,7 +50,8 @@ function handleScroll() {
     // Loop through each section
     sections.forEach(section => {
         // Calculate scroll direction (down or up)
-        const scrollDirection = window.scrollY > this.lastScroll ? 'down' : 'up';
+        //const scrollDirection = window.scrollY > this.lastScroll ? 'down' : 'up';
+        const scrollDirection = window.scrollY > lastScroll ? 'down' : 'up';
         this.lastScroll = window.scrollY;
         //console.log("scroll direction:", scrollDirection);
         // Apply transform based on scroll direction
@@ -57,10 +63,11 @@ function handleScroll() {
             //console.log("+section", section);
         }
     });
+    lastScroll = window.scrollY;
 }
 
 // Listen for scroll events and call handleScroll function
-window.addEventListener('scroll', handleScroll);
+
 
 function toggleDarkMode(darkOrLight) {
     const elements = document.querySelectorAll('.colorMode');
