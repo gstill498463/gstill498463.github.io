@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("v13");
+    console.log("v14");
     var theme = '';
     if (localStorage.getItem('theme') != null) {
         if (localStorage.getItem('theme') === 'dark') {
@@ -51,13 +51,13 @@ function handleScroll() {
     sections.forEach(section => {
         const scrollDirection = window.scrollY > this.lastScroll ? 'down' : 'up';
         this.lastScroll = window.scrollY;
-        //if (scrollDirection === 'down') {
-        //    section.style.transform = 'translateY(-100px)';
-        //    //console.log("-section", section);
-        //} else if (scrollDirection === 'up') {
-        //    section.style.transform = 'translateY(100px)';
-        //    //console.log("+section", section);
-        //}
+        if (scrollDirection === 'down') {
+            section.style.transform = 'translateX(-100px)';
+            //console.log("-section", section);
+        } else if (scrollDirection === 'up') {
+            section.style.transform = 'translateX(100px)';
+            //console.log("+section", section);
+        }
     });
     lastScroll = window.scrollY;
 }
