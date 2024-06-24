@@ -51,6 +51,43 @@ nav ul {
         nav ul li a {
             text-decoration: none;
         }
+/*new
+*/
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+}
+.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#hero.in-view {
+    transform: translateY(-50px);
+}
+
+#about.in-view {
+    transform: translateY(-50px);
+}
+
+#projects.in-view {
+    transform: translateY(-50px);
+}
+
+#skills.in-view {
+    transform: translateY(-50px);
+}
+
+#contact.in-view {
+    transform: translateY(-50px);
+}
+/*new
+*/
 
 #hero {
     padding: 5rem 1rem;
