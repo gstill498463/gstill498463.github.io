@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("v3")
+    console.log("v4");
     var theme = '';
     if (localStorage.getItem('theme') != null) {
         if (localStorage.getItem('theme') === 'dark') {
@@ -50,8 +50,8 @@ function handleScroll() {
     // Loop through each section
     sections.forEach(section => {
         // Calculate scroll direction (down or up)
-        //const scrollDirection = window.scrollY > this.lastScroll ? 'down' : 'up';
-        const scrollDirection = window.scrollY > lastScroll ? 'down' : 'up';
+        const scrollDirection = window.scrollY > this.lastScroll ? 'down' : 'up';
+        //const scrollDirection = window.scrollY > lastScroll ? 'down' : 'up';
         this.lastScroll = window.scrollY;
         //console.log("scroll direction:", scrollDirection);
         // Apply transform based on scroll direction
