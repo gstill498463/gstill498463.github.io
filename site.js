@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    console.log("v6");
+    console.log("v7");
     var theme = '';
     if (localStorage.getItem('theme') != null) {
         if (localStorage.getItem('theme') === 'dark') {
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
             ColorModeHeaderButtons(theme);
         }
     }
-    const sections = document.querySelectorAll('.section');
+    const sections = document.querySelectorAll('.slide-in');
 
     const observerOptions = {
         root: null,
