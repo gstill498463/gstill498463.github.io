@@ -77,7 +77,6 @@ nav ul {
     display: block;
     margin: 0 auto;
 }
-
 section {
     padding: 4rem 1rem;
     text-align: center;
@@ -94,7 +93,7 @@ section {
 
 .slide-in-visible {
     opacity: 1;
-    transform: translateY(0);
+    
 }
 
 section h2 {

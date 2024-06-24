@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("v12");
+    console.log("v13");
     var theme = '';
     if (localStorage.getItem('theme') != null) {
         if (localStorage.getItem('theme') === 'dark') {
@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
             ColorModeHeaderButtons(theme);
         }
     }
-    
     const slideInSections = document.querySelectorAll(".slide-in");
 
     const observer = new IntersectionObserver((entries) => {
@@ -50,19 +49,15 @@ const sections = document.querySelectorAll('.slide-in');
 function handleScroll() {
     // Loop through each section
     sections.forEach(section => {
-        // Calculate scroll direction (down or up)
         const scrollDirection = window.scrollY > this.lastScroll ? 'down' : 'up';
-        //const scrollDirection = window.scrollY > lastScroll ? 'down' : 'up';
         this.lastScroll = window.scrollY;
-        //console.log("scroll direction:", scrollDirection);
-        // Apply transform based on scroll direction
-        if (scrollDirection === 'down') {
-            section.style.transform = 'translateY(-100px)';
-            //console.log("-section", section);
-        } else if (scrollDirection === 'up') {
-            section.style.transform = 'translateY(100px)';
-            //console.log("+section", section);
-        }
+        //if (scrollDirection === 'down') {
+        //    section.style.transform = 'translateY(-100px)';
+        //    //console.log("-section", section);
+        //} else if (scrollDirection === 'up') {
+        //    section.style.transform = 'translateY(100px)';
+        //    //console.log("+section", section);
+        //}
     });
     lastScroll = window.scrollY;
 }
