@@ -119,6 +119,13 @@ section h2 {
             text-decoration: underline;
         }
 
+.skillsCardLight{
+    background:lightskyblue;
+}
+.skillsCardDark {
+    background: cornflowerblue;
+}
+
 footer {
     padding: 1rem 0;
     text-align: center;

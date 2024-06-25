@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ColorModeLightBulb(theme);
             ColorModeMoon(theme);
             ColorModeHeaderButtons(theme);
+            ColorModelSkillsCard(theme);
 
         }
         else {
@@ -72,6 +73,7 @@ function toggleDarkMode(darkOrLight) {
     ColorModeMoon(darkOrLight);
     ColorModeLightBulb(darkOrLight);
     ColorModeHeaderButtons(darkOrLight);
+    ColorModeSkillsCard(darkOrLight);
     
     elements.forEach(element => {
         if (darkOrLight === 'dark') {
@@ -127,6 +129,19 @@ function ColorModeLightBulb(darkOrLight) {
             ligthBulb.classList.remove('fa-regular');
             ligthBulb.classList.add('light-Bulb-On');
             ligthBulb.classList.add('fa-solid');
+        }
+    });
+}
+
+function ColorModeSkillsCard(darkOrLight) {
+    const topMenuButtons = document.querySelectorAll('.skillsCard');
+    topMenuButtons.forEach(button => {
+        if (darkOrLight === 'dark') {
+            button.classList.remove('skillsCardLight');
+            button.classList.add('skillsCardDark');
+        } else if (darkOrLight === 'light') {
+            button.classList.remove('skillsCardDark');
+            button.classList.add('skillsCardLight');
         }
     });
 }
