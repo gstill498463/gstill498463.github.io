@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ColorModeLightBulb(theme);
             ColorModeMoon(theme);
             ColorModeHeaderButtons(theme);
+            ColorModeAccentColor(theme);
         }
     }
     const slideInSections = document.querySelectorAll(".slide-in");
