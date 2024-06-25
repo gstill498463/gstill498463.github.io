@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ColorModeLightBulb(theme);
             ColorModeMoon(theme);
             ColorModeHeaderButtons(theme);
-            ColorModelSkillsCard(theme);
+            ColorModeSkillsCard(theme);
 
         }
         else {

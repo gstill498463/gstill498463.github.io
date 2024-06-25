@@ -7,15 +7,6 @@ body {
     /*background-color: cornflowerblue;*/
 }
 
-
-.skillsCardLight {
-    background: lightskyblue;
-}
-
-.skillsCardDark {
-    background: cornflowerblue;
-}
-
 .colorMode {
     color: #333333;
     background-color: #eeeeee;
@@ -32,7 +23,6 @@ body {
 .topMenuButtonsWhite {
     color: #eeeeee;
 }
-
 
 
 
@@ -129,7 +119,12 @@ section h2 {
             text-decoration: underline;
         }
 
-
+.skillsCardLight{
+    background:lightskyblue;
+}
+.skillsCardDark {
+    background: cornflowerblue;
+}
 
 footer {
     padding: 1rem 0;
