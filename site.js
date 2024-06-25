@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ColorModeLightBulb(theme);
             ColorModeMoon(theme);
             ColorModeHeaderButtons(theme);
-            ColorModeSkillsCard(theme);
+            ColorModeAccentColor(theme);
 
         }
         else {
@@ -73,7 +73,7 @@ function toggleDarkMode(darkOrLight) {
     ColorModeMoon(darkOrLight);
     ColorModeLightBulb(darkOrLight);
     ColorModeHeaderButtons(darkOrLight);
-    ColorModeSkillsCard(darkOrLight);
+    ColorModeAccentColor(darkOrLight);
     
     elements.forEach(element => {
         if (darkOrLight === 'dark') {
@@ -133,15 +133,15 @@ function ColorModeLightBulb(darkOrLight) {
     });
 }
 
-function ColorModeSkillsCard(darkOrLight) {
-    const topMenuButtons = document.querySelectorAll('.skillsCard');
+function ColorModeAccentColor(darkOrLight) {
+    const topMenuButtons = document.querySelectorAll('.accentColor');
     topMenuButtons.forEach(button => {
         if (darkOrLight === 'dark') {
-            button.classList.remove('skillsCardLight');
-            button.classList.add('skillsCardDark');
+            button.classList.remove('accentColorLight');
+            button.classList.add('accentColorDark');
         } else if (darkOrLight === 'light') {
-            button.classList.remove('skillsCardDark');
-            button.classList.add('skillsCardLight');
+            button.classList.remove('accentColorDark');
+            button.classList.add('accentColorLight');
         }
     });
 }

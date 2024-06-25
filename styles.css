@@ -119,10 +119,10 @@ section h2 {
             text-decoration: underline;
         }
 
-.skillsCardLight{
-    background:lightskyblue;
+.accentColorLight {
+    background: lightskyblue;
 }
-.skillsCardDark {
+.accentColorDark {
     background: cornflowerblue;
 }
 
