@@ -82,13 +82,13 @@ section {
     text-align: center;
     opacity: 0;
     /*transform: translateY(100px);*/
-    transition: opacity 3s ease-out, transform 3s ease-out;
+    transition: opacity 2.5s ease-out, transform 2.5s ease-out;
 }
 
 .slide-in {
     opacity: 0;
     /*transform: translateY(100px);*/
-    transition: opacity 3s ease-out, transform 3s ease-out;
+    transition: opacity 2.5s ease-out, transform 2.5s ease-out;
 }
 
 .slide-in-visible {
