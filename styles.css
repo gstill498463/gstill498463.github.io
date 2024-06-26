@@ -126,6 +126,29 @@ section h2 {
 .accentColorDark {
     /*background: cornflowerblue;*/
 }
+.card{
+    position: relative;
+}
+.card:hover::before{
+    opacity: 1;
+}
+.card::before{
+    background:radial-gradient(
+        800px circle at var (--mouse-x) var (--mouse-y),
+    rgba(255, 255, 255, 0.06),
+    transparent 40%);
+    border-radius: inherit;
+    content:"";
+    height: 100%;
+    left: 0px;
+    opacity:0;
+    transition: opacity 500ms;
+    position: absolute;
+    top:0px;
+    width: 100%;
+    z-index: 2;
+
+}
 
 footer {
     padding: 1rem 0;
