@@ -126,6 +126,13 @@ section h2 {
 .accentColorDark {
     /*background: cornflowerblue;*/
 }
+#cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width:922px;
+    width: calc(100% - 20px);
+}
 .card{
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
