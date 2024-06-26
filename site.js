@@ -1,5 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("v21 b");
+
+    document.getElementById("cards").onmousemove = e => {
+        for (const card of document.getElementsByClassName("card")) {
+            const rect = card.getBoundingClientRect(),
+                x = e.clientX - rect.left,
+                y = e.clientY - rect.top;
+
+            card.style.setProperty("--mouse-x", `${x}px`);
+            card.style.setProperty("--mouse-y", `${y}px`);
+        };
+    }
+    console.log("v22");
     var theme = '';
     if (localStorage.getItem('theme') == null) {
         localStorage.setItem('theme', 'dark');
@@ -190,14 +201,5 @@ function externalUrl(url) {
 //    console.log("onmouse hover");
 //}
 
-document.getElementById("cards").onmousemove = e => {
-    for (const card of document.getElementsByClassName("card")) {
-        const rect = card.getBoundingClientRect(),
-            x = e.clientX - rect.left,
-            y = e.clientY - rect.top;
 
-        card.style.setProperty("--mouse-x", `${x}px`);
-        card.style.setProperty("--mouse-y", `${y}px`);
-    };
-}
 
