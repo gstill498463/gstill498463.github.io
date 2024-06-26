@@ -120,10 +120,11 @@ section h2 {
         }
 
 .accentColorLight {
-    background: lightskyblue;
+    /*background: lightskyblue;*/
+    
 }
 .accentColorDark {
-    background: cornflowerblue;
+    /*background: cornflowerblue;*/
 }
 
 footer {
