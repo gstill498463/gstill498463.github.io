@@ -1,16 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    document.getElementById("cards").onmousemove = e => {
-        for (const card of document.getElementsByClassName("card")) {
-            const rect = card.getBoundingClientRect(),
-                x = e.clientX - rect.left,
-                y = e.clientY - rect.top;
-
-            card.style.setProperty("--mouse-x", `${x}px`);
-            card.style.setProperty("--mouse-y", `${y}px`);
-        };
-    }
-    console.log("v22");
+   
+    console.log("v23");
     var theme = '';
     if (localStorage.getItem('theme') == null) {
         localStorage.setItem('theme', 'dark');
@@ -185,6 +176,20 @@ function externalUrl(url) {
     }
 }
 
+const handleOnMouseHover = e => {
+    document.getElementById("cards").onmousemove = e => {
+        for (const card of document.getElementsByClassName("card")) {
+            const rect = card.getBoundingClientRect(),
+                x = e.clientX - rect.left,
+                y = e.clientY - rect.top;
+
+            card.style.setProperty("--mouse-x", `${x}px`);
+            card.style.setProperty("--mouse-y", `${y}px`);
+        };
+    }
+    console.log("handleOnMouseHover");
+
+}
 //const handleOnMouseHover = e => {
 //    const { currentTarget: target } = e;
 //    const rect = target.getBoundingClientRect(),
@@ -196,9 +201,20 @@ function externalUrl(url) {
 
 //}
 
-//for (const card of document.querySelectorAll(".card")) {
-//    card.onmousemove = e => handleOnMouseHover(e);
-//    console.log("onmouse hover");
+for (const card of document.querySelectorAll(".card")) {
+    card.onmousemove = e => handleOnMouseHover(e);
+    console.log("onmouse hover");
+}
+
+//document.getElementById("cards").onmousemove = e => {
+//    for (const card of document.getElementsByClassName("card")) {
+//        const rect = card.getBoundingClientRect(),
+//            x = e.clientX - rect.left,
+//            y = e.clientY - rect.top;
+
+//        card.style.setProperty("--mouse-x", `${x}px`);
+//        card.style.setProperty("--mouse-y", `${y}px`);
+//    };
 //}
 
 
