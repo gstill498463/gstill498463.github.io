@@ -130,10 +130,10 @@ section h2 {
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     cursor: pointer;
-    height: 200px;
+    height: 315px;
 
     position: relative;
-    width: 200px;
+    width: 315px;
 }
 .card:hover::before{
     opacity: 1;
