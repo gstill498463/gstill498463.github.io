@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("v21");
+    console.log("v21 b");
     var theme = '';
     if (localStorage.getItem('theme') == null) {
         localStorage.setItem('theme', 'dark');
