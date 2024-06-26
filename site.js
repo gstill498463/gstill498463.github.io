@@ -186,5 +186,6 @@ const handleOnMouseHover = e => {
 
 for (const card of document.querySelectorAll(".card")) {
     card.onmousemove = e => handleOnMouseHover(e);
+    console.log("onmouse hover");
 }
 
