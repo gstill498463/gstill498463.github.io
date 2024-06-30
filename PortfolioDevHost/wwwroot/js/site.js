@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-
-   
+    var lightOrDarkTitle = document.querySelectorAll('.lightOrDarkTitle');
     console.log("v24");
     var theme = '';
     if (localStorage.getItem('theme') == null) {
         localStorage.setItem('theme', 'dark');
+        
+        /*lightOrDarkTitle[0].innerHTML = "dark mode";*/
     }
     if (localStorage.getItem('theme') != null) {
         if (localStorage.getItem('theme') === 'dark') {
@@ -13,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ColorModeMoon(theme);
             ColorModeHeaderButtons(theme);
             ColorModeAccentColor(theme);
+            /*lightOrDarkTitle[0].innerHTML = "dark mode";*/
 
         }
         else {
@@ -21,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ColorModeMoon(theme);
             ColorModeHeaderButtons(theme);
             ColorModeAccentColor(theme);
+            /*lightOrDarkTitle[0].innerHTML = "light mode";*/
         }
     }
     const slideInSections = document.querySelectorAll(".slide-in");
@@ -72,8 +75,32 @@ function handleScroll() {
 // Listen for scroll events and call handleScroll function
 
 
-function toggleDarkMode(darkOrLight) {
+function toggleDarkMode() {
     const elements = document.querySelectorAll('.colorMode');
+    var lightOrDarkTitle = document.querySelectorAll('.lightOrDarkTitle');
+    var darkOrLight = '';
+    if (localStorage.getItem('theme') == null) {
+        localStorage.setItem('theme', 'dark');
+        darkOrLight = 'dark';
+       
+    }
+    else if (localStorage.getItem('theme') == 'dark') {
+        localStorage.setItem('theme', 'light');
+        darkOrLight = 'light';
+       
+    }
+    else if (localStorage.getItem('theme') == 'light') {
+        localStorage.setItem('theme', 'dark');
+        darkOrLight = 'dark';
+        
+    }
+
+    if (darkOrLight == "dark") {
+        /*lightOrDarkTitle[0].innerHTML = "dark mode";*/
+    }
+    else {
+        /*lightOrDarkTitle[0].innerHTML = "light mode";*/
+    }
     
     
     ColorModeMoon(darkOrLight);
@@ -192,6 +219,9 @@ for (const card of document.querySelectorAll(".card")) {
     card.onmousemove = e => handleOnMouseHover(e);
     console.log("onmouse hover");
 }
+
+
+
 
 
 
