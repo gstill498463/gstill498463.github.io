@@ -99,7 +99,7 @@ function toggleDarkMode() {
         /*lightOrDarkTitle[0].innerHTML = "dark mode";*/
     }
     else {
-        /*lightOrDarkTitle[0].innerHTML = "light mode";*/
+        /*lightOrDarkTitle[0].innerHTML = "light mode";test*/
     }
     
     
