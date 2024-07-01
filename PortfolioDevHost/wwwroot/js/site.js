@@ -1,3 +1,41 @@
+document.addEventListener('DOMContentLoaded', (event) => {
+    const modal = document.getElementById('modal');
+    const openModalButton = document.getElementById('openModal');
+    const closeButton = document.querySelector('.close-button');
+    const mainBody = document.querySelectorAll('.showHideMainBody');
+
+    openModalButton.addEventListener('click', () => {
+        modal.style.display = 'block';
+        /*mainBody.style.display = 'none';*/
+
+        mainBody.forEach(button => {
+            button.style.display = 'none';
+        });
+
+    });
+
+    closeButton.addEventListener('click', () => {
+        modal.style.display = 'none';
+        /*mainBody.style.display = 'block';*/
+        mainBody.forEach(button => {
+            button.style.display = 'block';
+        });
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+            /*mainBody.style.display = 'block';*/
+            mainBody.forEach(button => {
+                button.style.display = 'block';
+            });
+        }
+    });
+});
+//modal test  ^^^^^^^^^
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     var lightOrDarkTitle = document.querySelectorAll('.lightOrDarkTitle');
     console.log("v24");

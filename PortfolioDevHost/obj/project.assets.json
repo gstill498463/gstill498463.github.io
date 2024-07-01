@@ -8,24 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\gabri\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\gabri\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gabri\\Source\\Repos\\gstill498463\\gstill498463.github.io\\PortfolioDevHost\\PortfolioDevHost.csproj",
+      "projectUniqueName": "C:\\Users\\gabri\\source\\repos\\PortfolioDevHost\\PortfolioDevHost\\PortfolioDevHost.csproj",
       "projectName": "PortfolioDevHost",
-      "projectPath": "C:\\Users\\gabri\\Source\\Repos\\gstill498463\\gstill498463.github.io\\PortfolioDevHost\\PortfolioDevHost.csproj",
+      "projectPath": "C:\\Users\\gabri\\source\\repos\\PortfolioDevHost\\PortfolioDevHost\\PortfolioDevHost.csproj",
       "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gabri\\Source\\Repos\\gstill498463\\gstill498463.github.io\\PortfolioDevHost\\obj\\",
+      "outputPath": "C:\\Users\\gabri\\source\\repos\\PortfolioDevHost\\PortfolioDevHost\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
