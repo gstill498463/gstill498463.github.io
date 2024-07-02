@@ -20,6 +20,9 @@ body {
 .light-Bulb-On {
     color: #e9bc1c;
 }
+.fa-solid.fa-lightbulb:hover {
+    color: black;
+}
 
 .topMenuButtonsWhite {
     color: #eeeeee;
@@ -59,7 +62,9 @@ nav ul {
         nav ul li a {
             text-decoration: none;
         }
-
+.colorModeLightBulb:hover {
+    color: #e9bc1c;
+}
 .topMenuButtons:hover {
     color: rgba(0, 130, 255, 1);
 }
@@ -68,9 +73,29 @@ nav ul {
     font-family: "Segoe UI", Arial, sans-serif;
 }
 
+.profilePicture {
+    /*padding-right:200px;*/
+    /*transform: translateY(100px);
+    transition: opacity 2.5s ease-out, transform 2.5s ease-out;*/
+/*    padding-bottom:20px;
+*/}
+.aboutMeHero {
+    padding-top:25px;
+    /*padding-left:490px;*/
+/*    padding-top:100px;
+*/    
+    /*text-align:left;*/
+    /*transform:translateY(-100);
+    transition: opacity 2.5s ease-out, transform 2.5s ease-out;*/
+}
+
 #hero {
-    padding: 5rem 1rem;
-    text-align: center;
+    display: flex;
+    /*align-items:flex-start;*/
+    /*padding: 5rem 1rem;*/
+    /* text-align: center;*/
+    justify-content: center;
+    align-content:center;
     margin-top: 60px;
 }
 
@@ -91,7 +116,7 @@ nav ul {
     overflow: hidden;
     display: block;
     margin: 0 auto;
-    cursor: pointer;
+    cursor: default;
 }
 section {
     padding: 4rem 1rem;
@@ -242,7 +267,9 @@ section h2 {
         background: radial-gradient( 600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.4), transparent 40% );
         z-index: 1;
     }
-
+.fa-fade {
+    color:rgba(0, 130, 255, .8) ;
+}
  
 
     .card > .card-content {
@@ -398,7 +425,7 @@ footer {
     margin: 0 auto; /* Centered */
     padding: 20px;
     border: none;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 100%; /* Could be more or less, depending on screen size */
     max-height: 80vh; /* Set max-height to make it scrollable */
     overflow-y: auto; /* Enable vertical scroll */
     position: relative; /* Keep close button inside the content */
@@ -441,7 +468,7 @@ footer {
         background-repeat: no-repeat; /* Adjust as needed */
         background-position: center; /* Adjust as needed */
         /*background-color: transparent;*/ /* Optional: make background color transparent */
-        width: 80%; /* Adjust width as needed */
+        width: 99%; /* Adjust width as needed */
         height: 600px; /* Adjust height as needed */
     }
     .modalImages.porfolioImg2 {
@@ -450,9 +477,9 @@ footer {
         background-repeat: no-repeat; /* Adjust as needed */
         background-position: center; /* Adjust as needed */
         /*background-color: transparent;*/ /* Optional: make background color transparent */
-        /*width: 80%;*/ /* Adjust width as needed */
-        /*height: 600px;*/ /* Adjust height as needed */
-        display:flex;
+        width: 99%;  
+        height: 600px;  
+        /*display:flex;*/
     }
 
     .modalImages.porfolioImg3 {
@@ -462,6 +489,6 @@ footer {
         background-repeat: no-repeat; /* Adjust as needed */
         background-position: center; /* Adjust as needed */
         /*background-color: transparent;*/ /* Optional: make background color transparent */
-        width: 80%; /* Adjust width as needed */
+        width: 99%; /* Adjust width as needed */
         height: 600px; /* Adjust height as needed */
     }
