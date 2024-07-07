@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "89zMsuiCuiwHTndd4h6IP7soSLC7wxlYYXQQPeAI4Ew=",
+  "Hash": "2uQnHdBa7pGhXn7o+QrzY3+WPhTaU6wsfqz+tVbFW+c=",
   "Source": "PortfolioDevHost",
   "BasePath": "_content/PortfolioDevHost",
   "Mode": "Default",
@@ -1193,6 +1193,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\gabri\\source\\repos\\PortfolioDevHost\\PortfolioDevHost\\wwwroot\\Videos\\testMovie2.mp4",
+      "SourceId": "PortfolioDevHost",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\gabri\\source\\repos\\PortfolioDevHost\\PortfolioDevHost\\wwwroot\\",
+      "BasePath": "_content/PortfolioDevHost",
+      "RelativePath": "Videos/testMovie2.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Videos\\testMovie2.mp4"
     }
   ]
 }

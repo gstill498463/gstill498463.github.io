@@ -543,3 +543,17 @@ footer {
         max-height: 100%;
         object-fit: cover;
     }
+
+.porfolioVideo1 {
+    /*justify-content: center;*/
+    /* align-content: center;
+        align-items: center;*/
+    max-width: 100%;
+    border-radius: 15px;
+    /*border-color: rgba(0, 130, 255, 0.4);
+    border: solid;*/
+    /* max-height: 100%;*/
+    /*object-fit: cover;
+        display: flex;
+        flex-direction: column;*/
+}

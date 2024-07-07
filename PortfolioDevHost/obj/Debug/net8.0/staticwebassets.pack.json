@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\PortfolioDevHost.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\gabri\\source\\repos\\PortfolioDevHost\\PortfolioDevHost\\wwwroot\\Videos\\testMovie2.mp4",
+      "PackagePath": "staticwebassets\\Videos\\testMovie2.mp4"
+    },
+    {
       "Id": "C:\\Users\\gabri\\source\\repos\\PortfolioDevHost\\PortfolioDevHost\\wwwroot\\css\\styles.css",
       "PackagePath": "staticwebassets\\css\\styles.css"
     },
