@@ -1,10 +1,186 @@
+document.addEventListener('DOMContentLoaded', (event) => {
+    const openModalButton = document.getElementById('openModal');
+    const closeButton = document.querySelector('.close-button');
+    const mainBody = document.querySelectorAll('.showHideMainBody');
+    const modal = document.getElementById('projectModal');
+
+    //open modal buttons
+    const openDocModalButton = document.getElementById('openDocumentManagementModal');
+    const openProjectCreatorModalButton = document.getElementById('openProjectCreatorModal');
+    const openDashboardModalButton = document.getElementById('openDashboardModal');
+    const openPortfolioModalButton = document.getElementById('openPortfolioWebPageModal');
+    const openPythonModalButton = document.getElementById('openPythonScriptModal');
+    const openInvoiceModalButton = document.getElementById('openInvoiceManagementModal');
+
+    //modals
+    const docModal = document.getElementById('documentManagementModal');
+    const projectModal = document.getElementById('projectCreatorModal');
+    const dashboardModal = document.getElementById('dashboardModal');
+    const portfolioModal = document.getElementById('portfolioModal');
+    const pythonScriptModal = document.getElementById('pythonScriptModal');
+    //const modal = document.getElementById('projectModal');
+
+    //close buttons
+    const docCloseButton = document.querySelector('.doc-close-button');
+    const projectCloseButton = document.querySelector('.project-close-button');
+    const dashboardCloseButton = document.querySelector('.dashboard-close-button');
+    const portfolioCloseButton = document.querySelector('.portfolio-close-button');
+    const pythonScriptCloseButton = document.querySelector('.pythonScript-close-button');
+
+
+    //video play speed
+    const videos = document.querySelectorAll('video');
+    videos.forEach(video => {
+        video.playbackRate = 2.0;
+    });
+
+
+
+    //openModalButton.addEventListener('click', () => {
+    //    modal.style.display = 'block';
+    //    /*mainBody.style.display = 'none';*/
+
+    //    mainBody.forEach(button => {
+    //        button.style.display = 'none';
+    //    });
+
+    //});
+
+    openDocModalButton.addEventListener('click', () => {
+        docModal.style.display = 'block';
+        /*mainBody.style.display = 'none';*/
+
+        mainBody.forEach(button => {
+            button.style.display = 'none';
+        });
+
+    });
+
+    openProjectCreatorModalButton.addEventListener('click', () => {
+        projectModal.style.display = 'block';
+        /*mainBody.style.display = 'none';*/
+
+        mainBody.forEach(button => {
+            button.style.display = 'none';
+        });
+
+    });
+
+    openDashboardModalButton.addEventListener('click', () => {
+        dashboardModal.style.display = 'block';
+        /*mainBody.style.display = 'none';*/
+
+        mainBody.forEach(button => {
+            button.style.display = 'none';
+        });
+
+    });
+    openPortfolioModalButton.addEventListener('click', () => {
+        portfolioModal.style.display = 'block';
+        /*mainBody.style.display = 'none';*/
+
+        mainBody.forEach(button => {
+            button.style.display = 'none';
+        });
+
+    });
+
+    openPythonModalButton.addEventListener('click', () => {
+        pythonScriptModal.style.display = 'block';
+        /*mainBody.style.display = 'none';*/
+
+        mainBody.forEach(button => {
+            button.style.display = 'none';
+        });
+
+    });
+
+    //closeButton.addEventListener('click', () => {
+    //    modal.style.display = 'none';
+    //    /*mainBody.style.display = 'block';*/
+    //    mainBody.forEach(button => {
+    //        button.style.display = 'block';
+    //    });
+
+    //    scrollToSection('#projects');
+
+    //});
+    docCloseButton.addEventListener('click', () => {
+        docModal.style.display = 'none';
+        /*mainBody.style.display = 'block';*/
+        mainBody.forEach(button => {
+            button.style.display = 'block';
+        });
+
+        scrollToSection('#projects');
+
+    });
+
+    projectCloseButton.addEventListener('click', () => {
+        projectModal.style.display = 'none';
+        /*mainBody.style.display = 'block';*/
+        mainBody.forEach(button => {
+            button.style.display = 'block';
+        });
+
+        scrollToSection('#projects');
+
+    });
+    dashboardCloseButton.addEventListener('click', () => {
+        dashboardModal.style.display = 'none';
+        /*mainBody.style.display = 'block';*/
+        mainBody.forEach(button => {
+            button.style.display = 'block';
+        });
+
+        scrollToSection('#projects');
+
+    });
+
+    portfolioCloseButton.addEventListener('click', () => {
+        portfolioModal.style.display = 'none';
+        /*mainBody.style.display = 'block';*/
+        mainBody.forEach(button => {
+            button.style.display = 'block';
+        });
+
+        scrollToSection('#projects');
+
+    });
+
+    pythonScriptCloseButton.addEventListener('click', () => {
+        pythonScriptCloseButton.style.display = 'none';
+        /*mainBody.style.display = 'block';*/
+        mainBody.forEach(button => {
+            button.style.display = 'block';
+        });
+
+        scrollToSection('#projects');
+
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+            /*mainBody.style.display = 'block';*/
+            mainBody.forEach(button => {
+                button.style.display = 'block';
+            });
+        }
+    });
+
+});
+//modal test  ^^^^^^^^^
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     var lightOrDarkTitle = document.querySelectorAll('.lightOrDarkTitle');
     console.log("v24");
     var theme = '';
     if (localStorage.getItem('theme') == null) {
         localStorage.setItem('theme', 'dark');
-        
+
         /*lightOrDarkTitle[0].innerHTML = "dark mode";*/
     }
     if (localStorage.getItem('theme') != null) {
@@ -47,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener('scroll', handleScroll);
 
-    
+
 });
 
 let lastScroll = 0;
@@ -61,13 +237,7 @@ function handleScroll() {
     sections.forEach(section => {
         const scrollDirection = window.scrollY > this.lastScroll ? 'down' : 'up';
         this.lastScroll = window.scrollY;
-        //if (scrollDirection === 'down') {
-        //    section.style.transform = 'translateX(-100px)';
-        //    //console.log("-section", section);
-        //} else if (scrollDirection === 'up') {
-        //    section.style.transform = 'translateX(100px)';
-        //    //console.log("+section", section);
-        //}
+
     });
     lastScroll = window.scrollY;
 }
@@ -82,32 +252,30 @@ function toggleDarkMode() {
     if (localStorage.getItem('theme') == null) {
         localStorage.setItem('theme', 'dark');
         darkOrLight = 'dark';
-       
+
     }
     else if (localStorage.getItem('theme') == 'dark') {
         localStorage.setItem('theme', 'light');
         darkOrLight = 'light';
-       
+
     }
     else if (localStorage.getItem('theme') == 'light') {
         localStorage.setItem('theme', 'dark');
         darkOrLight = 'dark';
-        
+
     }
 
     if (darkOrLight == "dark") {
-        /*lightOrDarkTitle[0].innerHTML = "dark mode";*/
     }
     else {
-        /*lightOrDarkTitle[0].innerHTML = "light mode";*/
     }
-    
-    
+
+
     ColorModeMoon(darkOrLight);
     ColorModeLightBulb(darkOrLight);
     ColorModeHeaderButtons(darkOrLight);
     ColorModeAccentColor(darkOrLight);
-    
+
     elements.forEach(element => {
         if (darkOrLight === 'dark') {
             element.classList.add('dark-mode');
@@ -189,9 +357,11 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function scrollToSection(sectionId) {
+
     const element = document.querySelector(sectionId);
     if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
+        console.log("scrolledto: ", sectionId);
     }
 }
 
