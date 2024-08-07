@@ -5,8 +5,24 @@
       "PackagePath": "staticwebassets\\PortfolioDevHost.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\gabri\\source\\repos\\PortfolioDevHost\\PortfolioDevHost\\wwwroot\\Videos\\testMovie2.mp4",
-      "PackagePath": "staticwebassets\\Videos\\testMovie2.mp4"
+      "Id": "C:\\Users\\gabri\\source\\repos\\PortfolioDevHost\\PortfolioDevHost\\wwwroot\\Videos\\DocumentProject.mp4",
+      "PackagePath": "staticwebassets\\Videos\\DocumentProject.mp4"
+    },
+    {
+      "Id": "C:\\Users\\gabri\\source\\repos\\PortfolioDevHost\\PortfolioDevHost\\wwwroot\\Videos\\FullPageEditDashboard.mp4",
+      "PackagePath": "staticwebassets\\Videos\\FullPageEditDashboard.mp4"
+    },
+    {
+      "Id": "C:\\Users\\gabri\\source\\repos\\PortfolioDevHost\\PortfolioDevHost\\wwwroot\\Videos\\Portfolio.mp4",
+      "PackagePath": "staticwebassets\\Videos\\Portfolio.mp4"
+    },
+    {
+      "Id": "C:\\Users\\gabri\\source\\repos\\PortfolioDevHost\\PortfolioDevHost\\wwwroot\\Videos\\ProjectCreator.mp4",
+      "PackagePath": "staticwebassets\\Videos\\ProjectCreator.mp4"
+    },
+    {
+      "Id": "C:\\Users\\gabri\\source\\repos\\PortfolioDevHost\\PortfolioDevHost\\wwwroot\\Videos\\PythonSinkScript.mp4",
+      "PackagePath": "staticwebassets\\Videos\\PythonSinkScript.mp4"
     },
     {
       "Id": "C:\\Users\\gabri\\source\\repos\\PortfolioDevHost\\PortfolioDevHost\\wwwroot\\css\\styles.css",
