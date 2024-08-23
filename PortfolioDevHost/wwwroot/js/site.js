@@ -16,14 +16,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const docModal = document.getElementById('documentManagementModal');
     const projectModal = document.getElementById('projectCreatorModal');
     const dashboardModal = document.getElementById('dashboardModal');
-    //const modal = document.getElementById('projectModal');
-    //const modal = document.getElementById('projectModal');
+    const portfolioModal = document.getElementById('portfolioModal');
+    const pythonScriptModal = document.getElementById('pythonScriptModal');
     //const modal = document.getElementById('projectModal');
 
     //close buttons
     const docCloseButton = document.querySelector('.doc-close-button');
     const projectCloseButton = document.querySelector('.project-close-button');
     const dashboardCloseButton = document.querySelector('.dashboard-close-button');
+    const portfolioCloseButton = document.querySelector('.portfolio-close-button');
+    const pythonScriptCloseButton = document.querySelector('.pythonScript-close-button');
 
 
     //video play speed
@@ -66,6 +68,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     openDashboardModalButton.addEventListener('click', () => {
         dashboardModal.style.display = 'block';
+        /*mainBody.style.display = 'none';*/
+
+        mainBody.forEach(button => {
+            button.style.display = 'none';
+        });
+
+    });
+    openPortfolioModalButton.addEventListener('click', () => {
+        portfolioModal.style.display = 'block';
+        /*mainBody.style.display = 'none';*/
+
+        mainBody.forEach(button => {
+            button.style.display = 'none';
+        });
+
+    });
+
+    openPythonModalButton.addEventListener('click', () => {
+        pythonScriptModal.style.display = 'block';
         /*mainBody.style.display = 'none';*/
 
         mainBody.forEach(button => {
@@ -116,6 +137,28 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     });
 
+    portfolioCloseButton.addEventListener('click', () => {
+        portfolioModal.style.display = 'none';
+        /*mainBody.style.display = 'block';*/
+        mainBody.forEach(button => {
+            button.style.display = 'block';
+        });
+
+        scrollToSection('#projects');
+
+    });
+
+    pythonScriptCloseButton.addEventListener('click', () => {
+        pythonScriptModal.style.display = 'none';
+        /*mainBody.style.display = 'block';*/
+        mainBody.forEach(button => {
+            button.style.display = 'block';
+        });
+
+        scrollToSection('#projects');
+
+    });
+
     window.addEventListener('click', (event) => {
         if (event.target === modal) {
             modal.style.display = 'none';
@@ -125,6 +168,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             });
         }
     });
+
 });
 //modal test  ^^^^^^^^^
 
