@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 
     pythonScriptCloseButton.addEventListener('click', () => {
-        pythonScriptCloseButton.style.display = 'none';
+        pythonScriptModal.style.display = 'none';
         /*mainBody.style.display = 'block';*/
         mainBody.forEach(button => {
             button.style.display = 'block';
