@@ -1,0 +1,9 @@
+﻿@* <div class="btn-group btn-group-toggle" data-toggle="buttons" style="border: none; border-radius: 35px; padding-top: 15px;">
+                <label class="btn">
+                    <i class="fa-solid fa-lightbulb fa-xl colorModeLightBulb light-Bulb-On" style="background: none; border: none; cursor: pointer;" onclick="toggleDarkMode('light')"></i>
+                </label>
+
+                <label class="btn">
+                    <i class="fa-regular fa-moon fa-xl moonLightMode" style="background: none; border: none; cursor: pointer;" onclick="toggleDarkMode('dark')"></i>
+                </label>
+            </div> *@
