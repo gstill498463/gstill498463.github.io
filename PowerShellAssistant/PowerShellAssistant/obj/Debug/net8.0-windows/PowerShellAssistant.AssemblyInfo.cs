@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PowerShellAssistant")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bd24251c27a2198fcc1bced19737681295e8a9ca")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dcff0a34fe04c1f86838ac365b2b3ca6d066a7a9")]
 [assembly: System.Reflection.AssemblyProductAttribute("PowerShellAssistant")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PowerShellAssistant")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
