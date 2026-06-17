@@ -3,3 +3,4 @@ FileContentIndex
 *.suo
 *.user
 .vs/
+.vs

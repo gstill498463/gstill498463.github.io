@@ -1,8 +1,0 @@
-C:\Users\gabri\source\repos\codecademyASP\codecademyASP\bin\Debug\codecademyASP.exe.config
-C:\Users\gabri\source\repos\codecademyASP\codecademyASP\bin\Debug\codecademyASP.exe
-C:\Users\gabri\source\repos\codecademyASP\codecademyASP\bin\Debug\codecademyASP.pdb
-C:\Users\gabri\source\repos\codecademyASP\codecademyASP\obj\Debug\codecademyASP.csproj.AssemblyReference.cache
-C:\Users\gabri\source\repos\codecademyASP\codecademyASP\obj\Debug\codecademyASP.csproj.SuggestedBindingRedirects.cache
-C:\Users\gabri\source\repos\codecademyASP\codecademyASP\obj\Debug\codecademyASP.csproj.CoreCompileInputs.cache
-C:\Users\gabri\source\repos\codecademyASP\codecademyASP\obj\Debug\codecademyASP.exe
-C:\Users\gabri\source\repos\codecademyASP\codecademyASP\obj\Debug\codecademyASP.pdb
